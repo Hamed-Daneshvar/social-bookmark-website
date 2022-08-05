@@ -1,6 +1,14 @@
 asgiref==3.5.2
+certifi==2022.6.15
+cffi==1.15.1
+cryptography==37.0.4
 Django==3.2.15
+django-extensions==3.2.0
+MarkupSafe==2.1.1
 Pillow==9.2.0
+pycparser==2.21
+pyOpenSSL==22.0.0
 python-decouple==3.6
 pytz==2022.1
 sqlparse==0.4.2
+Werkzeug==2.2.1

@@ -177,6 +177,8 @@ cython_debug/
 # C extensions
 
 # Distribution / packaging
+*.crt
+*.key
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
