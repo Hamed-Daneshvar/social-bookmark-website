@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # third-party
     'django_extensions',
+    'easy_thumbnails',
 
     # local
     'account.apps.AccountConfig',
