@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from django.urls import reverse_lazy
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -152,3 +153,8 @@ AUTHENTICATION_BACKENDS = [
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = "Info@localhost"
+
+# URL reverse for User model
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda user: reverse_lazy('user_detail', args=[user.username])
+}
