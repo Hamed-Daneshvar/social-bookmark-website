@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from email.policy import default
 from pathlib import Path
 from django.urls import reverse_lazy
 from decouple import config
@@ -159,3 +160,9 @@ DEFAULT_FROM_EMAIL = "Info@localhost"
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda user: reverse_lazy('user_detail', args=[user.username])
 }
+
+
+# Redis config
+REDIS_HOST = config('REDIS_HOST', default='localhost')
+REDIS_PORT = config("REDIS_PORT", default=6379, cast=int)
+REDIS_DB = config("REDIS_DB", default=0, cast=int)
